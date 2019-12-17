@@ -10,7 +10,8 @@ import SwiftUI
 
 struct PhoneTabView: View {
     var body: some View {
-       TabView{
+        let PhoneRing = phoneRing()
+       return TabView{
         
         PhoneCallView().tabItem{
             Image(systemName: "phone.fill")
@@ -21,12 +22,19 @@ struct PhoneTabView: View {
                 Text("聊天")
             }
             
-        }
+        }.accentColor(.init(red: 204/255, green: 113/255, blue: 120/255)).environmentObject(PhoneRing)
     }
 }
 
+class phoneRing: ObservableObject {
+    @Published var PhoneRing: Bool = false
+}
+
+
 struct PhoneTabView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         PhoneTabView()
     }
 }

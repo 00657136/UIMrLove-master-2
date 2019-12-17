@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    var selectBackGround: Int
+    var fontnumber: CGFloat
     var content: String
     var TiaName = [7,8,13,16,17,19,24,25,34,37,39,41,43,45,57,59,61,63,72,74,77,80,82,85,87,89,91,94]
     var BoyImages = ["街道","銀優樓梯空","銀優樓梯","銀優樓梯女孩","銀優樓梯","銀優辦公室空","銀優辦公室","銀優辦公室笑","銀優辦公室","","銀優辦公室空","銀優辦公室","銀優辦公室不滿","銀優辦公室","街道"]
     @State private var NameIndex : Int = 0
-    //@Binding var NameIndex : Int
     @State private var textdia : Int = 1
     @State private var boyIndex : Int = 0
     @State private var isBelieve  = false
@@ -122,7 +123,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(content: "Tia")
+        ContentView(selectBackGround: 0,fontnumber: 20,content: "Tia")
     }
 }
 

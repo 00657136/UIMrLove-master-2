@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import AVFoundation
 import AVKit
 class VideoViewController: UIViewController {
  var looper: AVPlayerLooper?
@@ -17,8 +18,11 @@ class VideoViewController: UIViewController {
         NameButton.clipsToBounds = true
         NameButton.layer.cornerRadius = 10
         
-        let url = URL(string: "https://ppt.cc/mov/player.php")
-        let item = AVPlayerItem(url: url!)
+        guard let path = Bundle.main.path(forResource: "SignTheName", ofType:"mp4") else {
+            debugPrint("SignTheName.mp4 not found")
+            return
+        }
+        let item = AVPlayerItem(url: URL(fileURLWithPath: path))
         let player = AVQueuePlayer()
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resizeAspectFill
@@ -30,23 +34,7 @@ class VideoViewController: UIViewController {
         
         player.play()
         
-//        if let url = URL(string: "https://bit.ly/2Yn0y6L") {
-//        let item = AVPlayerItem(url: url)
-//        let player = AVQueuePlayer()
-//        let playerLayer = AVPlayerLayer(player: player)
-//
-//                playerLayer.videoGravity = .resizeAspectFill
-//                view.layer.addSublayer(playerLayer)
-//                playerLayer.frame = video.bounds
-//        looper = AVPlayerLooper(player: player, templateItem: item)
-//        let playerViewController = AVPlayerViewController()
-//        playerViewController.player = player
-//        present(playerViewController, animated: true, completion: {
-//           playerViewController.player?.play()
-//        })
-//        }
-        
-        // Do any additional setup after loading the view.
+
     }
   
     @IBOutlet var ViewVideo: UIView!
@@ -56,8 +44,7 @@ class VideoViewController: UIViewController {
     
     @IBAction func TurnToTia(_ sender: Any) {
     }
-    
-    //var looper: AVPlayerLooper?
+
     
 
    
@@ -65,7 +52,7 @@ class VideoViewController: UIViewController {
     
     @IBSegueAction func nextpage(_ coder: NSCoder) -> UIViewController? {
         let NameString:String = NameTextField.text!
-        let contentView = TiaPageView(content: NameString)
+        let contentView = TiaPageView(content: NameString,fontnumber: 26,selectBackGround: 0)
         return UIHostingController(coder: coder, rootView: contentView)
     }
     

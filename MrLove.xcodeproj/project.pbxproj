@@ -20,6 +20,7 @@
 		450E2D98239A9A5A00F79C9D /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E2D97239A9A5A00F79C9D /* VideoViewController.swift */; };
 		450E2D9A239AF40500F79C9D /* FriendChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E2D99239AF40500F79C9D /* FriendChatView.swift */; };
 		450E2D9C239B053900F79C9D /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E2D9B239B053800F79C9D /* SettingView.swift */; };
+		45E6E97123A67A6A00D9E6E9 /* SignTheName.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 45E6E97023A67A6A00D9E6E9 /* SignTheName.mp4 */; };
 		55972E20238CE813006688D8 /* PhoneTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55972E1F238CE813006688D8 /* PhoneTabView.swift */; };
 		55972E22238CE837006688D8 /* PhoneChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55972E21238CE837006688D8 /* PhoneChatView.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		450E2D97239A9A5A00F79C9D /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		450E2D99239AF40500F79C9D /* FriendChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendChatView.swift; sourceTree = "<group>"; };
 		450E2D9B239B053800F79C9D /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		45E6E97023A67A6A00D9E6E9 /* SignTheName.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignTheName.mp4; sourceTree = "<group>"; };
 		55972E1F238CE813006688D8 /* PhoneTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTabView.swift; sourceTree = "<group>"; };
 		55972E21238CE837006688D8 /* PhoneChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,16 +76,17 @@
 		35663C18234B9F3F0000ED4E /* MrLove */ = {
 			isa = PBXGroup;
 			children = (
+				45E6E97023A67A6A00D9E6E9 /* SignTheName.mp4 */,
 				35663C19234B9F3F0000ED4E /* AppDelegate.swift */,
 				35663C1B234B9F3F0000ED4E /* SceneDelegate.swift */,
-				35663C20234B9F3F0000ED4E /* ContentView.swift */,
-				3B4721962362158C0031DBC1 /* TiaPageView.swift */,
 				450E2D93239A999E00F79C9D /* main.storyboard */,
 				450E2D97239A9A5A00F79C9D /* VideoViewController.swift */,
-				3B441AF42362783600B361AD /* PhoneCallView.swift */,
-				55972E1F238CE813006688D8 /* PhoneTabView.swift */,
-				55972E21238CE837006688D8 /* PhoneChatView.swift */,
+				3B4721962362158C0031DBC1 /* TiaPageView.swift */,
 				450E2D9B239B053800F79C9D /* SettingView.swift */,
+				35663C20234B9F3F0000ED4E /* ContentView.swift */,
+				55972E1F238CE813006688D8 /* PhoneTabView.swift */,
+				3B441AF42362783600B361AD /* PhoneCallView.swift */,
+				55972E21238CE837006688D8 /* PhoneChatView.swift */,
 				450E2D99239AF40500F79C9D /* FriendChatView.swift */,
 				35663C22234B9F410000ED4E /* Assets.xcassets */,
 				35663C27234B9F410000ED4E /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35663C29234B9F410000ED4E /* LaunchScreen.storyboard in Resources */,
+				45E6E97123A67A6A00D9E6E9 /* SignTheName.mp4 in Resources */,
 				35663C26234B9F410000ED4E /* Preview Assets.xcassets in Resources */,
 				35663C23234B9F410000ED4E /* Assets.xcassets in Resources */,
 				450E2D94239A999E00F79C9D /* main.storyboard in Resources */,
