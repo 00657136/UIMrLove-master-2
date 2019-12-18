@@ -121,17 +121,25 @@ struct answerPhoneButton: View {
         Button(action:{
             if self.AnswerThePhone == false {
                 withAnimation(.easeOut(duration: 1)){
-                    self.isanimate = 1
+                    //self.isanimate = 1
                     self.animationAmount -= 360
                 }
-                self.AnswerThePhone = true
+                DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                    self.isanimate = 1
+                    self.AnswerThePhone = true
+
+                }
             }
             else if self.AnswerThePhone == true {
                 withAnimation(.easeOut(duration: 1)){
-                    self.isanimate = 0
+                    //self.isanimate = 0
                     self.animationAmount += 360
                 }
-                self.AnswerThePhone = false
+                DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                    self.isanimate = 0
+                    self.AnswerThePhone = false
+
+                }
             }
         }){
 
