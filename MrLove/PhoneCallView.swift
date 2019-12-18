@@ -25,7 +25,7 @@ struct PhoneCallView: View {
        return dateFormatter
     }()
     
-    @State private var chatArr = ["車教授...你怎麼有我的電話？","嗯？你今天早上不就打給我了嗎？","我快要到你們公司了","我們要約點呢？","好了","好，那我們待會見"]
+    @State private var chatArr = ["車教授...你怎麼有我的電話？","嗯？你今天早上不就打給我了嗎？","我快要到你們公司了","我們要約幾點呢？","好了","好，那我們待會見"]
     @State private var chatArrIndex = 0
     var body: some View {
         ZStack(alignment: .bottom){
@@ -121,7 +121,6 @@ struct answerPhoneButton: View {
         Button(action:{
             if self.AnswerThePhone == false {
                 withAnimation(.easeOut(duration: 1)){
-                    //self.isanimate = 1
                     self.animationAmount -= 360
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now()+1) {
@@ -132,7 +131,6 @@ struct answerPhoneButton: View {
             }
             else if self.AnswerThePhone == true {
                 withAnimation(.easeOut(duration: 1)){
-                    //self.isanimate = 0
                     self.animationAmount += 360
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now()+1) {
